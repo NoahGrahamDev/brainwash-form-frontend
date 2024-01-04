@@ -1,0 +1,35 @@
+body, html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+.heading, .paragraph {
+  color: white
+}
+  @keyframes purpleAnimation {
+    0%, 100% {
+      background-color: #eea1eb; /* Deep Purple */
+    }
+    50% {
+      background-color: #cb22d7; /* Lighter Shade of Purple */
+    }
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #cb22d7; /* Deep Purple */
+    animation: purpleAnimation 10s ease-in-out infinite;
+  }
+  

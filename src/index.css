@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body, html {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+@keyframes purpleAnimation {
+  0%, 100% {
+    background-color: #eea1eb;
+  }
+  50% {
+    background-color: #dc4de6;
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc4de6;
+  animation: purpleAnimation 10s ease-in-out infinite;
 }

@@ -1,0 +1,13 @@
+@keyframes purpleAnimation {
+    0%, 100% {
+      background-color: #eea1eb;
+    }
+    50% {
+      background-color: #dc4de6;
+    }
+  }
+  
+  .animated-background {
+    animation: purpleAnimation 15s ease-in-out infinite;
+  }
+  
