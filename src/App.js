@@ -1,11 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import './AnimationStyles.css';
 
-
 function App() {
+  const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
+
+  useEffect(() => {
+    const moveCursor = (e) => {
+      setCursorXY({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', moveCursor);
+
+    return () => {
+      window.removeEventListener('mousemove', moveCursor);
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.cursor = 'none';
+
+    return () => {
+      document.body.style.cursor = 'default';
+    };
+  }, []);
+
   useEffect(() => {
     document.body.style.margin = '0';
     document.body.style.padding = '0';
@@ -21,9 +40,7 @@ function App() {
       document.body.style.width = '';
     };
   }, []);
-  
-  
-  
+
   const [formData, setFormData] = useState({
     businessName: '',
     businessDescription: '',
@@ -54,10 +71,18 @@ function App() {
       alert('An error occurred during form submission. Check the console for more details.');
     }
   };
-  
 
   return (
     <div className="animated-background" style={styles.container}>
+      {/* Custom Cursor */}
+      <div
+        className="custom-cursor"
+        style={{
+          left: `${cursorXY.x}px`,
+          top: `${cursorXY.y}px`,
+        }}
+      ></div>
+
       <h1 style={styles.heading}>Completed Sale Form</h1>
       {error && <p style={styles.error}>{error}</p>}
       <form onSubmit={handleSubmit} style={styles.form}>
@@ -77,7 +102,7 @@ function App() {
           onChange={handleChange}
           style={styles.input}
         />
-         <input
+        <input
           type="text"
           name="businessName"
           placeholder="Business Name"
@@ -104,7 +129,6 @@ function App() {
     </div>
   );
 }
-
 
 const styles = {
   container: {
@@ -135,42 +159,42 @@ const styles = {
     fontFamily: 'Roboto, sans-serif',
   },
   input: {
-    padding: '15px',
-    fontFamily: 'Roboto, sans-serif',
+    padding: '20px', // Increased padding
     margin: '10px 0',
     borderRadius: '20px', 
     border: '1px solid #b19cd9', 
-    width: '300px',
+    width: '400px', // Increased width
     boxSizing: 'border-box',
     backgroundColor: '#f3e5f5', 
-    color: '#4a148c'
-  },
+    color: '#4a148c',
+    fontSize: '18px' // Increased font size
+  },  
   textarea: {
-    fontFamily: 'Roboto, sans-serif',
-    padding: '15px',
+    padding: '20px', // Increased padding
     margin: '10px 0',
     borderRadius: '20px',
     border: '1px solid #b19cd9',
-    width: '300px',
-    minHeight: '100px',
+    width: '400px', // Increased width
+    minHeight: '150px', // Increased minimum height
     resize: 'none',
     boxSizing: 'border-box',
     backgroundColor: '#f3e5f5',
-    color: '#4a148c'
-  },
+    color: '#4a148c',
+    fontSize: '18px' // Increased font size
+  },  
   button: {
-    fontFamily: 'Roboto, sans-serif',
-    padding: '10px 20px',
+    padding: '15px 30px', // Increased padding for larger size
     margin: '10px 0',
-    borderRadius: '20px',
+    borderRadius: '25px', // Slightly larger border-radius for aesthetics
     border: 'none',
     backgroundColor: '#7e57c2',
     color: 'white',
     cursor: 'pointer',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+    fontSize: '20px', // Increased font size for better visibility
+    width: '350px', // Optional: you can set a specific width if you like
+    height: '60px' // Optional: you can set a specific height if you like
+  }  
 };
-
-
 
 export default App;
