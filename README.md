@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Completed Sale Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the front-end of a **Completed Sale Form** designed for employees of a web design business to report when they have successfully landed a sale. The form provides a simple way for employees to submit essential sale information, ensuring the business can track new clients and sales performance.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Sale Reporting**: Employees can input key details about the sale they have completed.
+- **Minimal Design**: Clean and easy-to-use interface that facilitates quick submission.
+- **Submit Button**: The form includes a "Submit" button that can be connected to a back-end service to store the sale information.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **HTML5**: The structure and layout of the form.
+- **CSS3**: For styling the form to ensure it looks professional and responsive.
+- **JavaScript**: Manages form interaction and submission logic (expandable for validation or further interaction).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Repository Links
 
-### `npm test`
+- **Frontend Repository**: [Completed Sale Form Frontend](https://github.com/NoahGrahamDev/brainwash-form-frontend)
+- **Backend Repository**: [Completed Sale Form Backend](https://github.com/NoahGrahamDev/brainwash-form-backend) — This repository contains the back-end logic for processing and storing submitted form data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+1. Clone the frontend repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/NoahGrahamDev/brainwash-form-frontend.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Clone the backend repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/NoahGrahamDev/brainwash-form-backend.git
+```
 
-### `npm run eject`
+3. Set up both the frontend and backend on your local machine or server.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open the `index.html` file in a modern web browser to access and interact with the form.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Employees fill out the form with details about the sale they have completed, including client and project information.
+2. Click the **Submit** button to send the form data, which will be processed and stored by the backend system.
+  
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! If you have suggestions for improvements or new features, feel free to fork the repository and submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+With this form and backend system, employees can easily report their successful deals, and the business can track sales more efficiently!
